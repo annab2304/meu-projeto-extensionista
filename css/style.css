@@ -333,5 +333,64 @@ footer a{
 .btn-principal{
     padding:13px 24px;
 }
+/* PAGINA AGENDAR */
+
+.pagina-agendar{
+    padding:150px 8% 90px;
+    min-height:100vh;
+    background:#fef7f2;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.box-agendamento{
+    width:100%;
+    max-width:650px;
+    background:#fff;
+    padding:45px;
+    border-radius:22px;
+    box-shadow:0 12px 30px rgba(0,0,0,0.08);
+}
+
+.box-agendamento h1{
+    font-size:38px;
+    color:#c98d8d;
+    margin-bottom:10px;
+}
+
+.box-agendamento p{
+    color:#666;
+    margin-bottom:30px;
+}
+
+.box-agendamento form{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+}
+
+.box-agendamento label{
+    font-weight:bold;
+    font-size:15px;
+}
+
+.box-agendamento input,
+.box-agendamento select,
+.box-agendamento textarea{
+    width:100%;
+    padding:14px;
+    border:1px solid #ddd;
+    border-radius:12px;
+    font-size:16px;
+    outline:none;
+    transition:0.3s;
+}
+
+.box-agendamento input:focus,
+.box-agendamento select:focus,
+.box-agendamento textarea:focus{
+    border-color:#c98d8d;
+}
 
 }

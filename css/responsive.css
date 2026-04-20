@@ -48,5 +48,19 @@
 #menu-mobile{
     width:260px;
 }
+@media(max-width:768px){
 
+.pagina-agendar{
+    padding:120px 5% 70px;
+}
+
+.box-agendamento{
+    padding:28px;
+}
+
+.box-agendamento h1{
+    font-size:30px;
+}
+
+}
 }

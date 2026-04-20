@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Agendar | Espaço Aline Oliveira</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/agendar.css">
+<link rel="stylesheet" href="css/responsive.css">
+
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="topo">
+
+<a href="index.html" class="logo">
+<img src="img/logo.png" alt="Logo">
+</a>
+
+<button class="menu-btn" onclick="abrirMenu()">☰</button>
+
+</header>
+
+<!-- MENU -->
+<nav id="menu-mobile">
+
+<button class="fechar-menu" onclick="fecharMenu()">×</button>
+
+<a href="index.html">Início</a>
+<a href="servicos.html">Serviços</a>
+<a href="agendar.html">Agendar</a>
+<a href="horarios.html">Horários</a>
+
+</nav>
+
+<div id="overlay" onclick="fecharMenu()"></div>
+
+<!-- CONTEÚDO -->
+<main class="pagina-agendar">
+
+<section class="intro-agendar">
+
+<h1>Reserve seu horário ✨</h1>
+
+<p>
+Escolha seu procedimento e faça seu agendamento online
+de forma rápida, prática e segura.
+</p>
+
+<div class="passos">
+
+<div class="passo">
+<span>1</span>
+<p>Escolha o serviço</p>
+</div>
+
+<div class="passo">
+<span>2</span>
+<p>Selecione data e horário</p>
+</div>
+
+<div class="passo">
+<span>3</span>
+<p>Pague o sinal de 30%</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="box-agendamento">
+
+<form action="horarios.html">
+
+<label>Nome completo</label>
+<input type="text" required>
+
+<label>WhatsApp</label>
+<input type="tel" required>
+
+<label>Serviço desejado</label>
+<select required>
+<option value="">Selecione</option>
+<option>Design de Sobrancelha</option>
+<option>Henna</option>
+<option>Brown Lamination</option>
+<option>Extensão de Cílios</option>
+<option>Lash Lifting</option>
+<option>Manutenção</option>
+</select>
+
+<label>Observações</label>
+<textarea placeholder="Alguma observação?"></textarea>
+
+<div class="alerta">
+Para confirmar sua reserva será solicitado um sinal de 30%.
+</div>
+
+<button type="submit" class="btn-enviar">
+Continuar Agendamento
+</button>
+
+</form>
+
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+
+<h3>Espaço Aline Oliveira</h3>
+<p>Carapicuíba - SP</p>
+<p>WhatsApp: (11) 99999-9999</p>
+<p>Instagram: @espaco.alinecristioli</p>
+
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/agendar.js"></script>
+
+</body>
+</html>

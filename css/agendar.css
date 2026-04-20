@@ -1,0 +1,222 @@
+/* =========================
+PÁGINA AGENDAR
+========================= */
+
+.pagina-agendar{
+    padding:140px 8% 90px;
+    min-height:100vh;
+    background:#fef7f2;
+}
+
+/* TOPO TEXTO */
+
+.intro-agendar{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.intro-agendar h1{
+    font-size:48px;
+    color:#c98d8d;
+    margin-bottom:12px;
+}
+
+.intro-agendar p{
+    max-width:760px;
+    margin:auto;
+    color:#666;
+    line-height:1.8;
+    font-size:18px;
+}
+
+/* PASSOS */
+
+.passos{
+    margin-top:35px;
+    display:flex;
+    justify-content:center;
+    gap:22px;
+    flex-wrap:wrap;
+}
+
+.passo{
+    background:#fff;
+    padding:22px 26px;
+    border-radius:18px;
+    min-width:220px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.06);
+    transition:0.3s;
+    text-align:center;
+}
+
+.passo:hover{
+    transform:translateY(-5px);
+}
+
+.passo span{
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    background:#c98d8d;
+    color:#fff;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.passo p{
+    font-size:15px;
+    color:#444;
+}
+
+/* BOX FORM */
+
+.box-agendamento{
+    width:100%;
+    max-width:760px;
+    margin:55px auto 0;
+    background:#fff;
+    padding:45px;
+    border-radius:24px;
+    box-shadow:0 18px 40px rgba(0,0,0,0.08);
+}
+
+.box-agendamento form{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.box-agendamento label{
+    font-weight:bold;
+    font-size:15px;
+    color:#333;
+}
+
+.box-agendamento input,
+.box-agendamento select,
+.box-agendamento textarea{
+    width:100%;
+    padding:15px;
+    border:1px solid #ddd;
+    border-radius:14px;
+    font-size:16px;
+    background:#fafafa;
+    outline:none;
+    transition:0.3s;
+}
+
+.box-agendamento input:focus,
+.box-agendamento select:focus,
+.box-agendamento textarea:focus{
+    border-color:#c98d8d;
+    background:#fff;
+    box-shadow:0 0 0 3px rgba(201,141,141,0.10);
+}
+
+.box-agendamento textarea{
+    resize:none;
+    min-height:130px;
+}
+
+/* ALERTA */
+
+.alerta{
+    background:#fff4f4;
+    color:#b97b7b;
+    padding:14px;
+    border-radius:14px;
+    border:1px solid #f0d7d7;
+    font-size:15px;
+    line-height:1.6;
+}
+
+/* BOTÃO */
+
+.btn-enviar{
+    margin-top:8px;
+    background:#c98d8d;
+    color:#fff;
+    border:none;
+    padding:17px;
+    border-radius:40px;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn-enviar:hover{
+    background:#b97b7b;
+    transform:translateY(-3px);
+}
+
+/* =========================
+RESPONSIVO
+========================= */
+
+@media(max-width:992px){
+
+.intro-agendar h1{
+    font-size:40px;
+}
+
+.box-agendamento{
+    padding:35px;
+}
+
+}
+
+@media(max-width:768px){
+
+.pagina-agendar{
+    padding:120px 5% 70px;
+}
+
+.intro-agendar h1{
+    font-size:32px;
+}
+
+.intro-agendar p{
+    font-size:16px;
+}
+
+.passo{
+    width:100%;
+    min-width:auto;
+}
+
+.box-agendamento{
+    padding:28px 22px;
+}
+
+.box-agendamento input,
+.box-agendamento select,
+.box-agendamento textarea{
+    padding:14px;
+    font-size:15px;
+}
+
+.btn-enviar{
+    padding:15px;
+}
+
+}
+
+@media(max-width:480px){
+
+.intro-agendar h1{
+    font-size:28px;
+}
+
+.box-agendamento{
+    padding:22px 18px;
+}
+
+.alerta{
+    font-size:14px;
+}
+
+}
