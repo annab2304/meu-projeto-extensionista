@@ -1,0 +1,52 @@
+@media(max-width:900px){
+
+.grid-servicos{
+    grid-template-columns:1fr;
+}
+
+.slider{
+    height:55vh;
+}
+
+.sobre h1{
+    font-size:34px;
+}
+
+.servicos-home h2,
+.cta h2{
+    font-size:30px;
+}
+
+.logo img{
+    height:55px;
+}
+
+}
+
+@media(max-width:500px){
+
+.topo{
+    padding:15px 5%;
+}
+
+.slider{
+    height:42vh;
+}
+
+.sobre{
+    padding:50px 6%;
+}
+
+.sobre p{
+    font-size:16px;
+}
+
+.card-servico img{
+    height:220px;
+}
+
+#menu-mobile{
+    width:260px;
+}
+
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Espaço Aline Oliveira</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="topo">
+
+    <a href="index.html" class="logo">
+        <img src="img/logo.png" alt="Logo Espaço Aline Oliveira">
+    </a>
+
+    <button class="menu-btn" onclick="abrirMenu()">☰</button>
+
+</header>
+
+<!-- MENU MOBILE -->
+<nav id="menu-mobile">
+
+    <button class="fechar-menu" onclick="fecharMenu()">×</button>
+
+    <a href="index.html">Início</a>
+    <a href="servicos.html">Serviços</a>
+    <a href="agendar.html">Agendar</a>
+    <a href="#contato">Contato</a>
+
+</nav>
+
+<!-- OVERLAY -->
+<div id="overlay" onclick="fecharMenu()"></div>
+
+<!-- SLIDER -->
+<section class="slider">
+
+    <div class="slide ativo">
+        <img src="img/banner1.jpg" alt="Banner 1">
+    </div>
+
+    <div class="slide">
+        <img src="img/banner2.jpg" alt="Banner 2">
+    </div>
+
+</section>
+
+<!-- SOBRE -->
+<section class="sobre">
+
+    <h1>Realce sua beleza</h1>
+
+    <p>
+        Atendimento especializado em cílios e sobrancelhas,
+        com conforto, sofisticação e resultados impecáveis.
+    </p>
+
+    <a href="agendar.html" class="btn-principal">Agendar Horário</a>
+
+</section>
+
+<!-- SERVIÇOS -->
+<section class="servicos-home">
+
+    <h2>Serviços em destaque</h2>
+
+    <div class="grid-servicos">
+
+        <div class="card-servico">
+            <img src="img/servicos/cilios.jpg" alt="Cílios">
+            <h3>Extensão de Cílios</h3>
+            <p>Volume brasileiro, russo e personalizado.</p>
+        </div>
+
+        <div class="card-servico">
+            <img src="img/servicos/sobrancelha.jpg" alt="Sobrancelha">
+            <h3>Sobrancelhas</h3>
+            <p>Design, henna e alinhamento perfeito.</p>
+        </div>
+
+        <div class="card-servico">
+            <img src="img/servicos/agenda.jpg" alt="Agendamento">
+            <h3>Agendamento Online</h3>
+            <p>Escolha seu horário em segundos.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CTA -->
+<section class="cta">
+
+    <h2>Seu horário te espera ✨</h2>
+    <p>Agende online de forma rápida e segura.</p>
+
+    <a href="agendar.html" class="btn-principal">Agendar Agora</a>
+
+</section>
+
+<!-- FOOTER -->
+<footer id="contato">
+
+    <h3>Espaço Aline Oliveira</h3>
+
+    <p>Avenida Tâmara, 526 - Centro, Carapicuíba</p>
+
+    <p>WhatsApp: (11) 99999-9999</p>
+
+    <p>
+        Instagram:
+        <a href="https://instagram.com/espaco.alinecristioli" target="_blank">
+            @espaco.alinecristioli
+        </a>
+    </p>
+
+    <p>© 2026 Todos os direitos reservados</p>
+
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
