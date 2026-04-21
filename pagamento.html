@@ -4,16 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Confirmação | Espaço Aline Oliveira</title>
+<title>Pagamento | Espaço Aline Oliveira</title>
 
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/confirmacao.css">
+<link rel="stylesheet" href="css/pagamento.css">
 <link rel="stylesheet" href="css/responsive.css">
 
 </head>
 <body>
 
-<!-- HEADER -->
 <header class="topo">
 
 <a href="index.html" class="logo">
@@ -24,7 +23,6 @@
 
 </header>
 
-<!-- MENU -->
 <nav id="menu-mobile">
 
 <button class="fechar-menu" onclick="fecharMenu()">×</button>
@@ -32,62 +30,59 @@
 <a href="index.html">Início</a>
 <a href="servicos.html">Serviços</a>
 <a href="agendar.html">Agendar</a>
+<a href="horarios.html">Horários</a>
 
 </nav>
 
 <div id="overlay" onclick="fecharMenu()"></div>
 
-<!-- CONTEÚDO -->
-<main class="pagina-confirmacao">
+<main class="pagina-pagamento">
 
-<section class="box-confirmacao">
+<section class="box-pagamento">
 
-<div class="icone-check">✓</div>
+<h1>Pagamento da Reserva</h1>
 
-<h1>Agendamento Confirmado ✨</h1>
+<p1>
+Confirme seu horário realizando o pagamento do sinal.
+</p1>
 
-<p class="subtitulo">
-Seu horário foi reservado com sucesso.
-</p>
+<div class="resumo">
 
-<div class="resumo-confirmacao">
+<h3>Resumo do Agendamento</h3>
 
-<p><strong>Serviço:</strong> <span id="servico"></span></p>
-
-<p><strong>Data:</strong> <span id="data"></span></p>
-
-<p><strong>Horário:</strong> <span id="horario"></span></p>
-
-<p><strong>Pagamento:</strong> <span id="pagamento"></span></p>
+<p><strong>Serviço:</strong> Extensão de Cílios</p>
+<p><strong>Data:</strong> 25/04/2026</p>
+<p><strong>Horário:</strong> 14:00</p>
+<p><strong>Valor Total:</strong> R$ 150,00</p>
 
 </div>
 
-<div class="mensagem-final">
+<div class="opcoes">
 
-<p>
-Obrigada por escolher o Espaço Aline Oliveira 💖  
-Em breve entraremos em contato.
-</p>
+<label class="opcao">
+<input type="radio" name="pagamento" checked>
+Pagar sinal de 30% (R$ 45,00)
+</label>
 
-</div>
-
-<div class="botoes-confirmacao">
-
-<a href="https://wa.me/5511940282811" target="_blank" class="btn-whats">
-WhatsApp
-</a>
-
-<a href="index.html" class="btn-voltar">
-Voltar ao início
-</a>
+<label class="opcao">
+<input type="radio" name="pagamento">
+Pagar valor total agora (R$ 150,00)
+</label>
 
 </div>
+
+<div class="alerta">
+Após o pagamento sua reserva será confirmada.
+</div>
+
+<button class="btn-pagar" onclick="irPagamento()">
+Continuar para Pagamento
+</button>
 
 </section>
 
 </main>
 
-<!-- FOOTER -->
 <footer id="contato">
 
     <h3>Espaço Aline Oliveira</h3>
@@ -108,7 +103,7 @@ Voltar ao início
 </footer>
 
 <script src="js/script.js"></script>
-<script src="js/confirmacao.js"></script>
+<script src="js/pagamento.js"></script>
 
 </body>
 </html>

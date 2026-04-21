@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Confirmação | Espaço Aline Oliveira</title>
+<title>Login Administrativo | Espaço Aline Oliveira</title>
 
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/confirmacao.css">
+<link rel="stylesheet" href="css/login.css">
 <link rel="stylesheet" href="css/responsive.css">
 
 </head>
@@ -38,50 +38,31 @@
 <div id="overlay" onclick="fecharMenu()"></div>
 
 <!-- CONTEÚDO -->
-<main class="pagina-confirmacao">
+<main class="pagina-login">
 
-<section class="box-confirmacao">
+<section class="box-login">
 
-<div class="icone-check">✓</div>
-
-<h1>Agendamento Confirmado ✨</h1>
-
-<p class="subtitulo">
-Seu horário foi reservado com sucesso.
-</p>
-
-<div class="resumo-confirmacao">
-
-<p><strong>Serviço:</strong> <span id="servico"></span></p>
-
-<p><strong>Data:</strong> <span id="data"></span></p>
-
-<p><strong>Horário:</strong> <span id="horario"></span></p>
-
-<p><strong>Pagamento:</strong> <span id="pagamento"></span></p>
-
-</div>
-
-<div class="mensagem-final">
+<h1>Área Administrativa 🔐</h1>
 
 <p>
-Obrigada por escolher o Espaço Aline Oliveira 💖  
-Em breve entraremos em contato.
+Acesso exclusivo para gerenciamento do estúdio.
 </p>
 
-</div>
+<form id="formLogin">
 
-<div class="botoes-confirmacao">
+<label>E-mail</label>
+<input type="email" id="email" placeholder="Digite seu e-mail">
 
-<a href="https://wa.me/5511940282811" target="_blank" class="btn-whats">
-WhatsApp
-</a>
+<label>Senha</label>
+<input type="password" id="senha" placeholder="Digite sua senha">
 
-<a href="index.html" class="btn-voltar">
-Voltar ao início
-</a>
+<button type="submit" class="btn-login">
+Entrar
+</button>
 
-</div>
+</form>
+
+<p id="mensagemErro" class="erro"></p>
 
 </section>
 
@@ -108,7 +89,7 @@ Voltar ao início
 </footer>
 
 <script src="js/script.js"></script>
-<script src="js/confirmacao.js"></script>
+<script src="js/login.js"></script>
 
 </body>
 </html>

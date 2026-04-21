@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Horários | Espaço Aline Oliveira</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/horarios.css">
+<link rel="stylesheet" href="css/responsive.css">
+
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="topo">
+
+<a href="index.html" class="logo">
+<img src="img/logo.png" alt="Logo">
+</a>
+
+<button class="menu-btn" onclick="abrirMenu()">☰</button>
+
+</header>
+
+<!-- MENU -->
+<nav id="menu-mobile">
+
+<button class="fechar-menu" onclick="fecharMenu()">×</button>
+
+<a href="index.html">Início</a>
+<a href="servicos.html">Serviços</a>
+<a href="agendar.html">Agendar</a>
+<a href="horarios.html">Horários</a>
+
+</nav>
+
+<div id="overlay" onclick="fecharMenu()"></div>
+
+<!-- CONTEUDO -->
+<main class="pagina-horarios">
+
+<section class="box-horarios">
+
+<h1>Escolha seu horário</h1>
+
+<p id="servico-escolhido"></p>
+
+<label>Selecione a data</label>
+<input type="date" id="data">
+
+<h3>Horários disponíveis</h3>
+
+<div class="grade-horarios" id="listaHorarios">
+</div>
+
+<button class="btn-continuar" onclick="continuar()">
+Continuar
+</button>
+
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer id="contato">
+
+    <h3>Espaço Aline Oliveira</h3>
+
+    <p>Avenida Tâmara, 526 - Centro, Carapicuíba</p>
+
+    <p>WhatsApp: (11) 94028-2811</p>
+
+    <p>
+        Instagram:
+        <a href="https://instagram.com/espaco.alinecristioli" target="_blank">
+            @espaco.alinecristioli
+        </a>
+    </p>
+
+    <p>© 2026 Todos os direitos reservados</p>
+
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/horarios.js"></script>
+
+</body>
+</html>

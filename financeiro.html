@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Financeiro | Espaço Aline Oliveira</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/financeiro.css">
+<link rel="stylesheet" href="css/responsive.css">
+
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="topo">
+
+<a href="index.html" class="logo">
+<img src="img/logo.png" alt="Logo">
+</a>
+
+<button class="menu-btn" onclick="abrirMenu()">☰</button>
+
+</header>
+
+<!-- MENU -->
+<nav id="menu-mobile">
+
+<button class="fechar-menu" onclick="fecharMenu()">×</button>
+
+<a href="painel.html">Painel</a>
+<a href="financeiro.html">Financeiro</a>
+<a href="agendar.html">Novo Agendamento</a>
+<a href="index.html">Site</a>
+
+</nav>
+
+<div id="overlay" onclick="fecharMenu()"></div>
+
+<!-- CONTEÚDO -->
+<main class="pagina-financeiro">
+
+<section class="topo-financeiro">
+
+<h1>Financeiro 💰</h1>
+<p>Controle de entradas, sinais e faturamento do estúdio.</p>
+
+</section>
+
+<section class="cards-financeiro">
+
+<div class="card-financeiro">
+<h3 id="faturamentoMes">R$ 0,00</h3>
+<p>Faturamento do Mês</p>
+</div>
+
+<div class="card-financeiro">
+<h3 id="sinaisRecebidos">R$ 0,00</h3>
+<p>Sinais Recebidos</p>
+</div>
+
+<div class="card-financeiro">
+<h3 id="restanteReceber">R$ 0,00</h3>
+<p>Restante a Receber</p>
+</div>
+
+<div class="card-financeiro">
+<h3 id="atendimentosPagos">0</h3>
+<p>Pagamentos Confirmados</p>
+</div>
+
+</section>
+
+<section class="tabela-financeiro">
+
+<h2>Movimentações Recentes</h2>
+
+<div class="wrap-tabela">
+
+<table>
+
+<thead>
+<tr>
+<th>Cliente</th>
+<th>Serviço</th>
+<th>Valor</th>
+<th>Sinal</th>
+<th>Status</th>
+</tr>
+</thead>
+
+<tbody id="listaFinanceiro">
+
+<tr>
+<td>Ana Paula</td>
+<td>Fox Eyes</td>
+<td>R$ 180,00</td>
+<td>R$ 54,00</td>
+<td><span class="ok">Pago</span></td>
+</tr>
+
+<tr>
+<td>Maria Luiza</td>
+<td>Brasileiro</td>
+<td>R$ 150,00</td>
+<td>R$ 45,00</td>
+<td><span class="pendente">Pendente</span></td>
+</tr>
+
+<tr>
+<td>Camila</td>
+<td>Lash Lifting</td>
+<td>R$ 120,00</td>
+<td>R$ 36,00</td>
+<td><span class="ok">Pago</span></td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer id="contato">
+
+    <h3>Espaço Aline Oliveira</h3>
+
+    <p>Avenida Tâmara, 526 - Centro, Carapicuíba</p>
+
+    <p>WhatsApp: (11) 94028-2811</p>
+
+    <p>
+        Instagram:
+        <a href="https://instagram.com/espaco.alinecristioli" target="_blank">
+            @espaco.alinecristioli
+        </a>
+    </p>
+
+    <p>© 2026 Todos os direitos reservados</p>
+
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/financeiro.js"></script>
+
+</body>
+</html>

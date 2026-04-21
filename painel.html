@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Painel | Espaço Aline Oliveira</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/painel.css">
+<link rel="stylesheet" href="css/responsive.css">
+
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="topo">
+
+<a href="index.html" class="logo">
+<img src="img/logo.png" alt="Logo">
+</a>
+
+<button class="menu-btn" onclick="abrirMenu()">☰</button>
+
+</header>
+
+<!-- MENU -->
+<nav id="menu-mobile">
+
+<button class="fechar-menu" onclick="fecharMenu()">×</button>
+
+<a href="index.html">Início</a>
+<a href="painel.html">Painel</a>
+<a href="financeiro.html">Financeiro</a>
+<a href="agendar.html">Novo Agendamento</a>
+
+</nav>
+
+<div id="overlay" onclick="fecharMenu()"></div>
+
+<!-- CONTEÚDO -->
+<main class="pagina-painel">
+
+<section class="topo-painel">
+
+<h1>Olá, Aline ✨</h1>
+<p>Gerencie sua agenda e acompanhe os atendimentos.</p>
+
+</section>
+
+<section class="cards-painel">
+
+<div class="card-info">
+<h3 id="totalHoje">0</h3>
+<p>Atendimentos Hoje</p>
+</div>
+
+<div class="card-info">
+<h3 id="totalMes">0</h3>
+<p>Agendamentos no Mês</p>
+</div>
+
+<div class="card-info">
+<h3 id="pendentes">0</h3>
+<p>Pagamentos Pendentes</p>
+</div>
+
+<div class="card-info">
+<h3 id="proximoHorario">--:--</h3>
+<p>Próximo Horário</p>
+</div>
+
+</section>
+
+<section class="agenda-box">
+
+<div class="titulo-agenda">
+<h2>Agenda de Hoje</h2>
+</div>
+
+<div class="tabela-wrap">
+
+<table>
+
+<thead>
+<tr>
+<th>Cliente</th>
+<th>Serviço</th>
+<th>Data</th>
+<th>Horário</th>
+<th>Status</th>
+</tr>
+</thead>
+
+<tbody id="listaAgenda">
+
+<tr>
+<td>Ana Paula</td>
+<td>Fox Eyes</td>
+<td>25/04</td>
+<td>08:00</td>
+<td><span class="status confirmado">Confirmado</span></td>
+</tr>
+
+<tr>
+<td>Maria Luiza</td>
+<td>Brasileiro</td>
+<td>25/04</td>
+<td>10:00</td>
+<td><span class="status pendente">Pendente</span></td>
+</tr>
+
+<tr>
+<td>Camila</td>
+<td>Lash Lifting</td>
+<td>25/04</td>
+<td>14:00</td>
+<td><span class="status concluido">Concluído</span></td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer id="contato">
+
+    <h3>Espaço Aline Oliveira</h3>
+
+    <p>Avenida Tâmara, 526 - Centro, Carapicuíba</p>
+
+    <p>WhatsApp: (11) 94028-2811</p>
+
+    <p>
+        Instagram:
+        <a href="https://instagram.com/espaco.alinecristioli" target="_blank">
+            @espaco.alinecristioli
+        </a>
+    </p>
+
+    <p>© 2026 Todos os direitos reservados</p>
+
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/painel.js"></script>
+
+</body>
+</html>
