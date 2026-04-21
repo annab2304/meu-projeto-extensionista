@@ -5,7 +5,7 @@ const form = document.getElementById("formLogin");
 const erro = document.getElementById("mensagemErro");
 
 const emailCorreto = "aline@studio.com";
-const senhaCorreta = "123456";
+const senhaCorreta = "Eduarda@2022";
 
 form.addEventListener("submit", function(e){
 
