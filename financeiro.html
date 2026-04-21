@@ -42,12 +42,11 @@
 <main class="pagina-financeiro">
 
 <section class="topo-financeiro">
-
 <h1>Financeiro 💰</h1>
 <p>Controle de entradas, sinais e faturamento do estúdio.</p>
-
 </section>
 
+<!-- CARDS -->
 <section class="cards-financeiro">
 
 <div class="card-financeiro">
@@ -70,8 +69,28 @@
 <p>Pagamentos Confirmados</p>
 </div>
 
+<div class="filtro-mes">
+
+<label>Selecionar mês:</label>
+<input type="month" id="mesFiltro">
+
+<button onclick="filtrarMes()">Filtrar</button>
+<button onclick="carregarFinanceiro()">Ver todos</button>
+
+</div>
+
 </section>
 
+<!-- 🔥 GRÁFICO -->
+<section class="grafico-box">
+
+<h2>Faturamento por Dia</h2>
+
+<canvas id="graficoFinanceiro"></canvas>
+
+</section>
+
+<!-- TABELA -->
 <section class="tabela-financeiro">
 
 <h2>Movimentações Recentes</h2>
@@ -90,33 +109,7 @@
 </tr>
 </thead>
 
-<tbody id="listaFinanceiro">
-
-<tr>
-<td>Ana Paula</td>
-<td>Fox Eyes</td>
-<td>R$ 180,00</td>
-<td>R$ 54,00</td>
-<td><span class="ok">Pago</span></td>
-</tr>
-
-<tr>
-<td>Maria Luiza</td>
-<td>Brasileiro</td>
-<td>R$ 150,00</td>
-<td>R$ 45,00</td>
-<td><span class="pendente">Pendente</span></td>
-</tr>
-
-<tr>
-<td>Camila</td>
-<td>Lash Lifting</td>
-<td>R$ 120,00</td>
-<td>R$ 36,00</td>
-<td><span class="ok">Pago</span></td>
-</tr>
-
-</tbody>
+<tbody id="listaFinanceiro"></tbody>
 
 </table>
 
@@ -129,25 +122,27 @@
 <!-- FOOTER -->
 <footer id="contato">
 
-    <h3>Espaço Aline Oliveira</h3>
+<h3>Espaço Aline Oliveira</h3>
 
-    <p>Avenida Tâmara, 526 - Centro, Carapicuíba</p>
+<p>Avenida Tâmara, 526 - Centro, Carapicuíba</p>
+<p>WhatsApp: (11) 94028-2811</p>
 
-    <p>WhatsApp: (11) 94028-2811</p>
+<p>
+Instagram:
+<a href="https://instagram.com/espaco.alinecristioli" target="_blank">
+@espaco.alinecristioli
+</a>
+</p>
 
-    <p>
-        Instagram:
-        <a href="https://instagram.com/espaco.alinecristioli" target="_blank">
-            @espaco.alinecristioli
-        </a>
-    </p>
-
-    <p>© 2026 Todos os direitos reservados</p>
+<p>© 2026 Todos os direitos reservados</p>
 
 </footer>
 
+<!-- CHART JS -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 <script src="js/script.js"></script>
-<script src="js/financeiro.js"></script>
+<script type="module" src="js/financeiro.js"></script>
 
 </body>
 </html>

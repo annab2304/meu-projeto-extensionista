@@ -1,168 +1,99 @@
+import {
+db,
+collection,
+getDocs
+} from "./firebase.js";
+
 const dataInput = document.getElementById("data");
 const lista = document.getElementById("listaHorarios");
-const textoServico = document.getElementById("servico-escolhido");
 
 let horarioSelecionado = null;
 
-/* SERVIÇO ESCOLHIDO */
-let servico = localStorage.getItem("servico") || "Serviço selecionado";
+/* SERVIÇO */
+let servico = localStorage.getItem("servico");
 
-textoServico.innerHTML =
-"Procedimento: <strong>" + servico + "</strong>";
-
-/* DATA MINIMA = HOJE */
-let hoje = new Date().toISOString().split("T")[0];
-dataInput.min = hoje;
-
-/* SERVIÇOS DE 1 HORA */
+/* SERVIÇOS 1H */
 const servicos1h = [
-    "Design de Sobrancelha",
-    "Henna",
-    "Brown Lamination"
+"Design de Sobrancelha",
+"Henna",
+"Brown Lamination"
 ];
 
-/* DESCOBRE TEMPO */
 function duracaoServico(){
-
-    if(servicos1h.includes(servico)){
-        return 1;
-    }
-
-    return 2;
+    return servicos1h.includes(servico) ? 1 : 2;
 }
 
-/* AO TROCAR DATA */
+/* GERAR HORÁRIOS */
 dataInput.addEventListener("change", gerarHorarios);
 
-/* GERA HORÁRIOS */
-function gerarHorarios(){
+async function gerarHorarios(){
 
     lista.innerHTML = "";
-    horarioSelecionado = null;
 
-    if(!dataInput.value) return;
+    let dataEscolhida = dataInput.value;
 
-    let dataEscolhida = new Date(dataInput.value + "T00:00:00");
-    let dia = dataEscolhida.getDay();
+    if(!dataEscolhida) return;
 
+    let dataObj = new Date(dataEscolhida + "T00:00:00");
+    let dia = dataObj.getDay();
     let duracao = duracaoServico();
+
     let horarios = [];
 
-    /* SEGUNDA(1) TERÇA(2) QUINTA(4) */
+    /* SEMANA */
     if(dia === 1 || dia === 2 || dia === 4){
-
-        if(duracao === 1){
-
-            horarios = [
-                "19:00",
-                "20:00",
-                "21:00"
-            ];
-
-        }else{
-
-            horarios = [
-                "19:00"
-            ];
-
-        }
-
+        horarios = duracao === 1
+        ? ["19:00","20:00","21:00"]
+        : ["19:00"];
     }
 
-    /* SABADO(6) DOMINGO(0) */
+    /* FDS */
     else if(dia === 6 || dia === 0){
-
-        if(duracao === 1){
-
-            horarios = [
-                "08:00","09:00","10:00","11:00",
-                "12:00","13:00","14:00","15:00","16:00"
-            ];
-
-        }else{
-
-            horarios = [
-                "08:00",
-                "10:00",
-                "12:00",
-                "14:00"
-            ];
-
-        }
-
+        horarios = duracao === 1
+        ? ["08:00","09:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00"]
+        : ["08:00","10:00","12:00","14:00"];
     }
 
-    /* SEM ATENDIMENTO */
     else{
-
-        lista.innerHTML =
-        "<p class='sem-atendimento'>Nenhum atendimento nesta data.</p>";
-
+        lista.innerHTML = "<p>Nenhum atendimento nesta data.</p>";
         return;
     }
 
-    let agora = new Date();
-    let hojeTexto = agora.toISOString().split("T")[0];
+    /* 🔥 BUSCAR HORÁRIOS OCUPADOS */
+    const dados = await getDocs(collection(db,"agendamentos"));
 
+    let ocupados = [];
+
+    dados.forEach((doc)=>{
+        const ag = doc.data();
+
+        if(ag.data === dataEscolhida){
+            ocupados.push(ag.horario);
+        }
+    });
+
+    /* RENDER */
     horarios.forEach(hora => {
 
         let botao = document.createElement("button");
-
-        botao.type = "button";
         botao.innerText = hora;
         botao.classList.add("hora");
 
-        /* BLOQUEIA HORÁRIOS PASSADOS DO DIA ATUAL */
-        if(dataInput.value === hojeTexto){
-
-            let horaNumero = parseInt(hora.split(":")[0]);
-
-            if(horaNumero <= agora.getHours()){
-
-                botao.classList.add("ocupado");
-
-            }
-
+        if(ocupados.includes(hora)){
+            botao.classList.add("ocupado");
+            botao.disabled = true;
         }
 
-        /* CLICK */
-        botao.addEventListener("click", () => {
+        botao.onclick = () => {
 
-            if(botao.classList.contains("ocupado")) return;
-
-            document.querySelectorAll(".hora").forEach(item => {
-                item.classList.remove("ativo");
+            document.querySelectorAll(".hora").forEach(b=>{
+                b.classList.remove("ativo");
             });
 
             botao.classList.add("ativo");
-
             horarioSelecionado = hora;
-
-        });
+        };
 
         lista.appendChild(botao);
-
     });
-
-}
-
-/* CONTINUAR */
-function continuar(){
-
-    if(!dataInput.value){
-
-        alert("Selecione uma data.");
-        return;
-    }
-
-    if(!horarioSelecionado){
-
-        alert("Selecione um horário.");
-        return;
-    }
-
-    localStorage.setItem("data", dataInput.value);
-    localStorage.setItem("horario", horarioSelecionado);
-
-    window.location.href = "pagamento.html";
 }

@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="css/responsive.css">
 
 </head>
+
 <body>
 
 <!-- HEADER -->
@@ -48,6 +49,7 @@
 
 </section>
 
+<!-- CARDS -->
 <section class="cards-painel">
 
 <div class="card-info">
@@ -72,6 +74,7 @@
 
 </section>
 
+<!-- AGENDA -->
 <section class="agenda-box">
 
 <div class="titulo-agenda">
@@ -79,6 +82,17 @@
 </div>
 
 <div class="tabela-wrap">
+
+<!-- FILTRO -->
+<div class="filtro">
+
+<label>Filtrar por data:</label>
+<input type="date" id="filtroData">
+
+<button onclick="filtrar()">Filtrar</button>
+<button onclick="carregar()">Ver todos</button>
+
+</div>
 
 <table>
 
@@ -89,36 +103,13 @@
 <th>Data</th>
 <th>Horário</th>
 <th>Status</th>
+<th>Pagamento</th>
+<th>Ação</th>
+<th>Editar</th>
 </tr>
 </thead>
 
-<tbody id="listaAgenda">
-
-<tr>
-<td>Ana Paula</td>
-<td>Fox Eyes</td>
-<td>25/04</td>
-<td>08:00</td>
-<td><span class="status confirmado">Confirmado</span></td>
-</tr>
-
-<tr>
-<td>Maria Luiza</td>
-<td>Brasileiro</td>
-<td>25/04</td>
-<td>10:00</td>
-<td><span class="status pendente">Pendente</span></td>
-</tr>
-
-<tr>
-<td>Camila</td>
-<td>Lash Lifting</td>
-<td>25/04</td>
-<td>14:00</td>
-<td><span class="status concluido">Concluído</span></td>
-</tr>
-
-</tbody>
+<tbody id="listaAgenda"></tbody>
 
 </table>
 
@@ -128,28 +119,58 @@
 
 </main>
 
+<!-- MODAL EDITAR -->
+<div id="modalEditar" class="modal">
+
+<div class="modal-box">
+
+<h2>Editar Agendamento</h2>
+
+<input type="hidden" id="editId">
+
+<label>Nome</label>
+<input type="text" id="editNome">
+
+<label>Serviço</label>
+<input type="text" id="editServico">
+
+<label>Data</label>
+<input type="date" id="editData">
+
+<label>Horário</label>
+<input type="time" id="editHorario">
+
+<div class="modal-botoes">
+<button onclick="salvarEdicao()">Salvar</button>
+<button onclick="fecharModal()">Cancelar</button>
+</div>
+
+</div>
+
+</div>
+
 <!-- FOOTER -->
 <footer id="contato">
 
-    <h3>Espaço Aline Oliveira</h3>
+<h3>Espaço Aline Oliveira</h3>
 
-    <p>Avenida Tâmara, 526 - Centro, Carapicuíba</p>
+<p>Avenida Tâmara, 526 - Centro, Carapicuíba</p>
 
-    <p>WhatsApp: (11) 94028-2811</p>
+<p>WhatsApp: (11) 94028-2811</p>
 
-    <p>
-        Instagram:
-        <a href="https://instagram.com/espaco.alinecristioli" target="_blank">
-            @espaco.alinecristioli
-        </a>
-    </p>
+<p>
+Instagram:
+<a href="https://instagram.com/espaco.alinecristioli" target="_blank">
+@espaco.alinecristioli
+</a>
+</p>
 
-    <p>© 2026 Todos os direitos reservados</p>
+<p>© 2026 Todos os direitos reservados</p>
 
 </footer>
 
 <script src="js/script.js"></script>
-<script src="js/painel.js"></script>
+<script type="module" src="js/painel.js"></script>
 
 </body>
 </html>
